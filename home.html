@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>HOME</title>
+</head>
+
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+
+    <div class="top_sec">
+
+        <div class="logo">
+            <img src="images/logo3.png" alt="">
+        </div>
+
+        <ul id="top_nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#dance">Dance</a></li>
+            <li><a href="#art">Art</a></li>
+        </ul>
+
+    </div>
+
+    <div class="background-white">
+        <div id="profile">
+            <h2>Who Am I?</h2>
+            <p class="lead">A Dance Enthusiast! A Creative Artist!</p>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About me</h3>
+                    <p>
+                        I am a passionate and a creative figure! I'm having two YouTube channels to showcase my
+                        talent and
+                        spread love over to all my viewers. I love doing dance covers which include both classical and
+                        bollywood. I love spending time on
+                        creating paintings and making short dance videos/reels. Also, I love to have company while doing
+                        anything
+                        interesting so that I have fun and learn more. Just as the saying goes: “Coming together is a
+                        beginning. Keeping together is progress. Working together is success.” </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/bendBio.jpg" alt="Akshita Back Bend " width="246" height="246" />
+                </div>
+                <div class="col-md-4">
+                    <h3>Details</h3>
+                    <p>
+                        <strong>Name:</strong><br />
+                        Akshita Katiyar<br />
+                        <strong>Age:</strong><br />
+                        12 years old<br />
+                        <strong>Location:</strong><br />
+                        Mumbai, India! </p>
+                </div>
+            </div>
+
+            <div class="social-menu">
+                <ul>
+                    <li><a href="https://www.instagram.com/_akshita_xoxo/" target="_blank"><i
+                                class="fa fa-instagram"></i></a>
+                    </li>
+                    <li><a href="snap.html" target="_blank"><i class="fa fa-snapchat-ghost"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC2cexalfxO-99hjK3i7I7MQ" target="_blank"><i
+                                class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC8bCFVa6-TTum2vPcHuQRUQ" target="_blank"><i
+                                class="fa fa-youtube"></i></a></li>
+                    <li><a href="gmail.html" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+            <a name="dance"></a>
+            <div class="dance">
+                <h2>DANCE VIDEOS</h2>
+                <hr />
+                <br>
+                <iframe width="1060" height="515" src="https://www.youtube.com/embed/H9Pepf6cIiY" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <a href="dance.html">
+                    <h4>VIEW ALL VIDEOS</h4>
+                </a>
+            </div>
+
+            <a name="art"></a>
+            <div class="art">
+                <h2>ART VIDEOS</h2>
+                <hr />
+                <br>
+                <iframe width="1060" height="515" src="https://www.youtube.com/embed/QMh-un1_DNk" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <a href="art.html">
+                    <h4>VIEW ALL VIDEOS</h4>
+                </a>
+            </div>
+        </div>
+
+        <div class="end_sec">
+            <ul>
+                <li><a href="https://www.instagram.com/_akshita_xoxo/" target="_blank"><i
+                            class="fa fa-instagram"></i></a>
+                </li>
+                <li><a href="snap.html" target="_blank"><i class="fa fa-snapchat-ghost"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC2cexalfxO-99hjK3i7I7MQ" target="_blank"><i
+                            class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC8bCFVa6-TTum2vPcHuQRUQ" target="_blank"><i
+                            class="fa fa-youtube"></i></a></li>
+                <li><a href="gmail.html" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+
+            <h6>@ 2020 Akshita Katiyar | All Rights Reserved |</h6>
+        </div>
+
+        <section>
+            <h2>Bubbles</h2>
+        </section>
+
+        <script type="text/javascript">
+            function createBubble() {
+                const section = document.querySelector('section');
+                const createElement = document.createElement('span');
+                var size = Math.random() * 60;
+
+                createElement.style.width = 30 + size + 'px';
+                createElement.style.height = 30 + size + 'px';
+                createElement.style.left = Math.random() * innerWidth + 'px';
+                section.appendChild(createElement);
+
+                setTimeout(() => {
+                    createElement.remove()
+                }, 4000)
+            }
+
+            setInterval(createBubble, 50);
+
+
+            let progress = document.getElementById('progressbar');
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function () {
+                let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                progress.style.height = progressHeight + "%";
+            }
+        </script>
+</body>
+
+</html>
